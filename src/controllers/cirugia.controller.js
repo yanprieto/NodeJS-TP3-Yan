@@ -1,36 +1,55 @@
 // CONTROLADOR DE CIRUGIAS
 
+const models = require('../database/models/index')
+
 module.exports = {
     
-    listar: async (req, res) => {
+    prueba: async (req, res) => {
         try{
-            console.log('Ejecutando listar')
+            console.log('Ejecutando prueba')
 
             res.json({
-                message: " Se listaran todos los cirugias"
+                message: " Genera una prueba en cirugia"
             })
         } catch (err) {
             console.log(err)
         }
     },
+
+    listar: async (req, res) => {
+        try{
+        
+            const cirugias = await models.cirugia.findAll()
+
+            res.json({
+                success: true,
+                data: {
+                    cirugias: cirugias
+                }
+            })
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    
     crear: async (req, res) => {
         try{
             console.log('Ejecutando crear')
 
             res.json({
-                message: " Se creara un cirugia"
+                message: " Se creara una cirugia"
             })
         } catch (err) {
             console.log(err)
         }
     },
 
-    listarinfo: async (req, res) => {
+    listarInfo: async (req, res) => {
         try{
             console.log('Ejecutando listarinfo')
 
             res.json({
-                message: " Se listan los datos de un cirugia"
+                message: " Se listan los datos de una cirugia"
             })
         } catch (err) {
             console.log(err)

@@ -20,7 +20,7 @@ const init = () => {
     configuracionRouter(app)  //configura las rutas
 
     app.listen(globalConstants.PORT)
-    console.log('La aplicacion esta ejecutando se en el puerto: ' + globalConstants.PORT)
+    console.log('La aplicacion esta ejecutando se en el puertooo  .... : ' + globalConstants.PORT)
 }
 
 init();

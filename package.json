@@ -1,16 +1,30 @@
 {
-  "name": "proyecto2022-nodejs",
+  "name": "entrega2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
+    "db:create": "npx sequelize-cli db:create",
+    "db:seed": "npx sequelize db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yandira",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.2",
-    "express": "^4.18.1"
-  }
+    "express": "^4.18.2",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.6",
+    "sequelize-cli": "^6.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanprieto/ProyectoNodeJS-2022-Yan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yanprieto/ProyectoNodeJS-2022-Yan/issues"
+  },
+  "homepage": "https://github.com/yanprieto/ProyectoNodeJS-2022-Yan#readme",
+  "description": ""
 }
